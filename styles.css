@@ -1,0 +1,89 @@
+.pagina {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contenedor-titulo {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-end-end-radius: 15px;
+  border-end-start-radius: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.contenedor-titulo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%, -50%);
+  background-image: url("img/Mono transparente (3).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  animation: rotar-fondo 60s linear infinite;
+}
+.logo{
+    position: relative;
+    width: 15rem;
+    padding-right: 5rem;
+    left: 0;
+}
+
+.titulo {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 0, 0);
+  font-size: 15vw;
+  font-weight: bold;
+  font-family: 'Tall';
+  letter-spacing: 1rem;
+  text-shadow: 10px 5px rgb(87, 11, 11);
+  animation: entrada-desde-arriba 1.2s ease-out forwards;
+  text-align: center;
+}
+
+@keyframes entrada-desde-arriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rotar-fondo {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Tall';
+  src: url('fonts/TallGrass.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
