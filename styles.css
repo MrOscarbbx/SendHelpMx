@@ -1,5 +1,5 @@
 .pagina {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
 }
 
 header {
@@ -11,43 +11,41 @@ header {
 .contenedor-titulo {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-end-end-radius: 15px;
-  border-end-start-radius: 15px;
+  border-radius: 100px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 10px 100px rgb(0, 0, 0);
+  margin: 0 auto;
+}
+section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-.contenedor-titulo::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1000px;
-  height: 1000px;
-  transform: translate(-50%, -50%);
-  background-image: url("img/Mono transparente (3).png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 0;
-  animation: rotar-fondo 60s linear infinite;
-}
-.logo{
-    position: relative;
-    width: 15rem;
+.logo-izquierda {
+    position: absolute;
+    z-index: 0;
+    transform: translate(-5%,30%) rotate(-90deg) scaleX(-1);
+    width: 1500px;
     padding-right: 5rem;
-    left: 0;
+    animation: fade-in 2.2s ease-out;
+    
 }
 
 .titulo {
   position: relative;
   z-index: 1;
   color: rgb(255, 0, 0);
-  font-size: 15vw;
+  top: -15%;
+  font-size: 26vw;
   font-weight: bold;
   font-family: 'Tall';
   letter-spacing: 1rem;
@@ -55,6 +53,116 @@ header {
   animation: entrada-desde-arriba 1.2s ease-out forwards;
   text-align: center;
 }
+
+.scrolling-item {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s, transform 0.6s;
+  animation: aparecer 1s forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.contenedor {
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+  width: 50vw;
+  height: 50vh;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  box-shadow: 0 10px 10px rgb(0, 0, 0);
+}
+.izquierda{
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-self: start;
+}
+.derecha{
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-self: end;
+}
+
+
+.contenedor-titulo .scrolling-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenedor-titulo {
+    height: 50vh; /* Ajusta la altura para ocupar toda la pantalla */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    width: 100%;
+
+  }
+  .logo-izquierda {
+    position: absolute;
+    z-index: 0;
+    transform: translate(0%, 40%) rotate(-90deg) scaleX(-1);
+    width: 140vw; /* Ajusta el ancho para ocupar toda la pantalla */
+    padding-right: 5rem;
+    animation: fade-in 2.2s ease-out;
+  }
+  .section {
+    display: flex;
+    position: relative;
+    align-items: start;
+  }
+  .titulo { /* Ajusta el tamaño del texto para pantallas pequeñas */
+    letter-spacing: 0.1rem; /* Reduce el espaciado entre letras */
+    display: flex;
+    font-size: 30vw;
+    top: -30%;
+  }
+  .scrolling-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+    animation: aparecer 1s forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  .contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vw; /* Ajusta según tu diseño */
+  margin: 0 auto;
+  padding: 20px; /* Añade un poco de espacio alrededor */
+  width: 100%;
+}
+.contenedor {
+  display: flex;
+  width: 90vw; /* Ajusta el ancho para pantallas pequeñas */
+  height: 50vh; /* Ajusta la altura para pantallas pequeñas */
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  margin: 10px auto;
+}
+.izquierda,.derecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+}
+
+
+
+/* Animaciones */
 
 @keyframes entrada-desde-arriba {
   0% {
@@ -64,6 +172,16 @@ header {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -81,6 +199,7 @@ header {
   }
 }
 
+/* Fuentes personalizadas */
 @font-face {
   font-family: 'Tall';
   src: url('fonts/TallGrass.ttf') format('truetype');
