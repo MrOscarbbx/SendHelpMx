@@ -1,13 +1,11 @@
 .pagina {
     background-color: rgb(168, 0, 0);
 }
-
 header {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-
 .contenedor-titulo {
   position: relative;
   width: 100%;
@@ -21,7 +19,6 @@ header {
   box-shadow: 0 10px 100px rgb(0, 0, 0);
   margin: 0 auto;
 }
-
 section {
     display: flex;
     position: relative;
@@ -30,7 +27,6 @@ section {
     width: 100%;
     height: 100%;
 }
-
 .logo-izquierda {
     position: absolute;
     z-index: 0;
@@ -39,7 +35,6 @@ section {
     padding-right: 5rem;
     animation: fade-in 2.2s ease-out;
 }
-
 .titulo {
   position: relative;
   z-index: 1;
@@ -62,12 +57,10 @@ section {
   justify-self: end;
   border-radius: 10px;
 }
-
 #twitch-embed {
   width: 100%;
   height: 100%;
 }
-
 .twitch iframe {
   width: 100% !important;
   height: 100% !important;
@@ -102,8 +95,6 @@ section {
   cursor: pointer;
   transition: color 0.3s ease
 }
-
-
 .scrolling-item {
   opacity: 0;
   transform: scale(0.8);
@@ -112,9 +103,7 @@ section {
 .scrolling-item.visible {
     opacity: 1;
     transform: scale(1);
-  }
-
-  
+}  
 .contenedor {
   border-radius: 20px;
   display: flex;
@@ -141,7 +130,6 @@ section {
   display: flex;
   justify-self: end;
 }
-
 .pask {
   font-family: 'Pask';
   font-size: 5rem;
@@ -157,7 +145,6 @@ section {
   color: rgb(0, 0, 0);
   text-shadow: 2px 2px rgb(255, 255, 255);
 }
-
 .texto-pagina {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 30%;
@@ -176,9 +163,6 @@ section {
   border-radius: 10px; /* Bordes redondeados para el fondo */
   text-align: center; /* Centra el texto */
 }
-
-
-
 .contenedor-titulo .scrolling-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -276,7 +260,7 @@ section {
   }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 100px) {
   .contenedor-titulo {
     height: 60vh; /* Ajusta la altura para pantallas medianas */
     display: flex;
