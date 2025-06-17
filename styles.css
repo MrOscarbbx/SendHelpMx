@@ -1,5 +1,5 @@
 .pagina {
-    background-color: rgb(168, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 header {
     display: flex;
@@ -14,9 +14,7 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 100px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 10px 100px rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0);
   margin: 0 auto;
 }
 section {
@@ -30,11 +28,31 @@ section {
 .logo-izquierda {
     position: absolute;
     z-index: 0;
-    transform: translate(-5%,30%) rotate(-90deg) scaleX(-1);
+    transform: translate(-13%,-40%) rotate(-90deg) scaleX(-1);
     width: 120vw;
     padding-right: 5rem;
     animation: fade-in 2.2s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+.logo-izquierda:hover {
+    transform: translate(-13%,-40%) rotate(-90deg) scaleX(-1) scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
+
+.logo-izquierda::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/logo.png');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
 .titulo {
   position: relative;
   z-index: 1;
@@ -44,7 +62,7 @@ section {
   font-weight: bold;
   font-family: 'Tall';
   letter-spacing: 1rem;
-  text-shadow: 10px 5px rgb(87, 11, 11);
+  text-shadow: 10px 5px rgb(0, 0, 0);
   animation: entrada-desde-arriba 1.2s ease-out forwards;
   text-align: center;
 }
@@ -166,6 +184,29 @@ section {
 .contenedor-titulo .scrolling-item:nth-child(1) {
   animation-delay: 0.2s;
 }
+.contenedor-footer {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.instagram {
+  width: 50%;
+  height:100vh;
+  display: flex;
+  z-index: 1;
+  align-self: start;
+  justify-self: end;
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
+  display: block;
+}
+.instagram-media {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* Estilo para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {

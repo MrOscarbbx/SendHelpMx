@@ -12,13 +12,13 @@
     <body class="pagina">
         <div class="contenedor-titulo">
             <section>
-                <img src="img/Mono transparente (3).png" alt="Logo de SendHelpMx" class="logo-izquierda">
                 <div class="titulo"> 
                     Send Help MX 
                 </div>
             </section>
         </div>
         <div class="contenido">
+            <img src="img/Mono transparente (3).png" alt="Logo de SendHelpMx" class="logo-izquierda">
             <div class="izquierda">
                 <div class="scrolling-item contenedor">
                     <h1 class="graffiti">Bienvenido a SendHelpMx</h1>
@@ -32,7 +32,6 @@
                     una experiencia unica.
                     </h2>
             </div>
-            <!--
                 <div class="izquierda">
                     <h2 class="texto-pagina scrolling-item"> 
                         Somos un grupo de personas
@@ -44,31 +43,46 @@
                     <div class="scrolling-item contenedor">
                         <h1 class="graffiti">¿Quienes somos?</h1>
                     </div>
-            -->
-
-            </div>
-            <div class="directos scrolling-item">
-                <h2 class="texto-pagina texto-directos"> 
-                    Actualmente estamos en vivo en Twitch
-                    Puedes ver nuestro contenido
-                </h2>
-                <div class="twitch scrolling-item">
-                        <div id="twitch-embed"></div>
-                </div>
-
-            </div>
-
-            <!-- Load the Twitch embed script -->
-            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
-            <script type="text/javascript">
-            new Twitch.Player("twitch-embed", {
-                width: '100%',
-                height: '100%',
-                channel: "sendhelpmx"
-            });
-            </script>
         </div>
+        <div class="directos scrolling-item">
+            <h2 class="texto-pagina texto-directos"> 
+                Actualmente estamos en vivo en Twitch
+                Puedes ver nuestro contenido
+            </h2>
+            <div class="twitch scrolling-item">
+                    <div id="twitch-embed"></div>
+            </div>
+
+        </div>
+
+        <!-- Load the Twitch embed script -->
+        <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+        <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+            width: '100%',
+            height: '100%',
+            channel: "sendhelpmx"
+        });
+        </script>
+        <dir class="instagram scrolling-item">
+            <blockquote 
+              class="instagram-media" 
+              data-instgrm-permalink="https://www.instagram.com/sendhelpmx/" 
+              data-instgrm-version="14"
+              <a href="https://www.instagram.com/sendhelpmx/" target="_blank">Ver perfil en Instagram</a>
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </dir>
+
+        <footer class="footer">
+            <div class="contenedor-footer">
+                <div class="footer-texto">
+                    <p>© 2023 SendHelpMx. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        </body>
     </body>
 </html>
