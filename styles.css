@@ -1,6 +1,10 @@
 .pagina {
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
+  background-image: url(img/FondoPagina\ web.png);
+  background-size: 500px 500px; /* Ajusta el tamaño del fondo */
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 header {
     display: flex;
@@ -35,25 +39,6 @@ section {
     animation: fade-in 2.2s ease-out;
     animation-fill-mode: forwards;
   }
-
-.logo-izquierda:hover {
-    transform: translate(-13%,-40%) rotate(-90deg) scaleX(-1) scale(1.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.logo-izquierda::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('img/logo.png');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-}
-
 .titulo {
   position: relative;
   z-index: 1;
@@ -69,7 +54,7 @@ section {
 }
 .twitch {
   width: 60vw;
-  height: 60vh; /* O el alto que prefieras, por ejemplo 40vh o 60vh */
+  height: 60vh;
   position: relative;
   z-index: 1;
   align-self: start;
@@ -107,6 +92,7 @@ section {
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0);
+  display: flex;
   margin-right: 10px;
 }
 .texto-directos:hover {
@@ -133,9 +119,7 @@ section {
   background-position: top;
   width: 70vw;
   height: 70vh;
-  color: rgb(0, 0, 0);
   margin: 20px;
-  box-shadow: 0 10px 10px rgb(0, 0, 0);
 }
 .izquierda{
   right: 0;
@@ -177,7 +161,7 @@ section {
   text-justify: inter-word; /* Justifica el texto entre palabras */
   overflow-wrap: break-word;
   white-space: normal;
-  background-color: rgba(0, 0, 0, 0.226); /* Fondo semitransparente para mejorar la legibilidad */
+  background-color: rgba(0, 0, 0, 0.651); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 10px; /* Añade un poco de espacio alrededor del texto */
   border-radius: 10px; /* Bordes redondeados para el fondo */
   text-align: center; /* Centra el texto */
@@ -191,21 +175,39 @@ section {
   color: white;
   text-align: center;
   padding: 10px;
-}
-.instagram {
-  width: 50%;
-  height:100vh;
-  display: flex;
-  z-index: 1;
-  align-self: start;
-  justify-self: end;
-  border-radius: 15px 15px 15px 15px;
-  overflow: hidden;
-  display: block;
-}
-.instagram-media {
   width: 100%;
   height: 100%;
+}
+.instagram {
+  right: 10px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding:20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+.instagram iframe {
+  width: 70% !important;
+  height: 90vh !important;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-self: start;
+  border-radius: 20px!important;
+  box-shadow: 1px 10px 40px rgb(0, 0, 0)!important;
+}
+.texto-instagram {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 10px;
+  display: flex;
 }
 
 
