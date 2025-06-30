@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <!-- Agrega esto dentro de la etiqueta <head> de tu HTML -->
-        <link rel="icon" type="image/png" href="img/Mono transparente (3).png">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SendHelpMx</title>
-    </head>
-    <body class="pagina">
-        <div class="splash-screen">
-            <img src="img/Mono-transparente-_3_.webp" alt="Logo de SendHelpMX" class="logo-splash">
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/Mono transparente (3).png">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendHelpMx</title>
+</head>
+<body class="pagina">
+    <div class="splash-screen">
+        <img src="img/Mono-transparente-_3_.webp" alt="Logo de SendHelpMX" class="logo-splash">
+    </div>
+
+    <header>
         <div class="contenedor-titulo">
-            <section>
-                <div class="titulo"> 
-                    Send Help MX 
-                </div>
-            </section>
+            <div class="titulo scrolling-item">Send Help MX</div>
         </div>
-        <div class="contenido">
-            <div class="scrolling-container seccion">
-                <div class="scrolling-item contenedor">
-                    <h1 class="graffiti">Bienvenido a SendHelpMx</h1>
-                </div>
-                <h2 class="texto-pagina scrolling-item "> 
-                    SendHelpMX somos una
-                    empresa de creacion 
-                    de contenido y de Software
-                    Enfocada a preservar su Esencia
-                    y ofrecer a nuestros usuarios
-                    una experiencia unica.
-                    </h2>
-            </div>
-        <div class="directos scrolling-item">
+    </header>
+
+    <main class="contenido">
+        <section class="scrolling-container seccion">
+            <div class="contenedor"></div>
+            <h2 class="graffiti scrolling-item">
+                SendHelpMX somos una
+                empresa de creacion 
+                de contenido y de Software
+                Enfocada a preservar su Esencia
+                y ofrecer a nuestros usuarios
+                una experiencia unica.
+            </h2>
+        </section>
+
+        <section class="directos scrolling-item">
             <a href="https://www.twitch.tv/sendhelpmx" class="texto-pagina texto-directos"> 
                 Es Posible que nos encuentres en directo en twitch,
                 donde hacemos directos de videojuegos, y charlamos con nuestra comunidad.
             </a>
             <div class="twitch scrolling-item">
-                    <div id="twitch-embed"></div>
+                <div id="twitch-embed"></div>
             </div>
+        </section>
 
-        </div>
+        <section class="instagram scrolling-item">
+            <blockquote 
+                class="instagram-media" 
+                data-instgrm-permalink="https://www.instagram.com/sendhelpmx/" 
+                data-instgrm-version="14">
+                <a href="https://www.instagram.com/sendhelpmx/" target="_blank">Ver perfil en Instagram</a>
+            </blockquote>
+            <h2 class="graffiti texto-instagram scrolling-item"> 
+                Puedes seguirnos en Instagram
+                para ver nuestro contenido
+                y estar al tanto de nuestras novedades.
+            </h2>
+        </section>
+    </main>
 
-        <!-- Load the Twitch embed script -->
-        <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-        <!-- Create a Twitch.Player object. This will render within the placeholder div -->
-        <script type="text/javascript">
+    <!-- Scripts al final del body para mejor rendimiento -->
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script src="script.js"></script>
+    <script>
         new Twitch.Player("twitch-embed", {
             width: '100%',
             height: '100%',
             channel: "sendhelpmx"
         });
-        </script>
-        <dir class="instagram scrolling-item">
-            <blockquote 
-              class="instagram-media" 
-              data-instgrm-permalink="https://www.instagram.com/sendhelpmx/" 
-              data-instgrm-version="14"
-              <a href="https://www.instagram.com/sendhelpmx/" target="_blank">Ver perfil en Instagram</a>
-            </blockquote>
-            <script async src="//www.instagram.com/embed.js"></script>
-            <h2 class="texto-pagina texto-instagram"> 
-                Puedes seguirnos en Instagram
-                para ver nuestro contenido
-                y estar al tanto de nuestras novedades.
-            </h2>
-        </dir>
-    </body>
+    </script>
+    <script async src="//www.instagram.com/embed.js"></script>
+</body>
 </html>
