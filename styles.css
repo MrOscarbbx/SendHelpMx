@@ -1,6 +1,6 @@
 .pagina {
   position: relative;
-  background-color: #141414;
+  background:radial-gradient(circle at 50% 50%, #ff0000, #000000);
 }
 
 .pagina::before {
@@ -8,12 +8,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url('img/Mono-transparente-_3_.webp');
-  background-size: 25vh;
-  background-repeat: repeat;
   width: 100vw;
-  height: 100vh;  
-  filter: blur(10px);
+  height: 100vh;
   z-index: 0;
   opacity: 1;
   pointer-events: none;
