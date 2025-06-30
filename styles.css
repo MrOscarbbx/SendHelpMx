@@ -1,25 +1,43 @@
 .pagina {
   background-color: rgb(255, 255, 255);
-  overflow-x: hidden;
-  background-image: url(img/FondoPagina\ web.png);
-  background-size: 500px 500px; /* Ajusta el tamaño del fondo */
+  background-image: url('img/Mono-transparente-_3_.webp');
+  background-size: 25vh;
   background-repeat: repeat;
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 header {
     display: flex;
     width: 100%;
     justify-content: center;
 }
+.splash-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.splash-screen.display-none {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.logo-splash {
+  width: 500px;
+  height: auto;
+  animation: bounce-in 1.5s linear ;
+  animation-fill-mode: forwards;
+}
 .contenedor-titulo {
   position: relative;
-  width: 100%;
-  height: 90vh;
+  width: 100%; /* Ajusta la altura para ocupar toda la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0);
   margin: 0 auto;
 }
 section {
@@ -30,21 +48,11 @@ section {
     width: 100%;
     height: 100%;
 }
-.logo-izquierda {
-    position: absolute;
-    z-index: 0;
-    transform: translate(-13%,-40%) rotate(-90deg) scaleX(-1);
-    width: 120vw;
-    padding-right: 5rem;
-    animation: fade-in 2.2s ease-out;
-    animation-fill-mode: forwards;
-  }
 .titulo {
   position: relative;
   z-index: 1;
   color: rgb(255, 0, 0);
-  top: -15%;
-  font-size: 26vw;
+  font-size: 25vw;
   font-weight: bold;
   font-family: 'Tall';
   letter-spacing: 1rem;
@@ -82,7 +90,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url('img/twitch-logo-png_seeklogo-274042.png');
+  background-image: url('img/twitch-logo-png_seeklogo-274042.webp');
   background-size: auto;
   background-position: center;
   border-radius: 15px;
@@ -91,9 +99,10 @@ section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(255, 255, 255);
   display: flex;
-  margin-right: 10px;
+  margin-right: 20px;
+  text-decoration: none;
 }
 .texto-directos:hover {
   color: rgb(132, 1, 255);
@@ -114,9 +123,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: end;
-  background-image: url('img/Hello_my_name_is_sticker.svg.png');
+  background-image: url('img/Hello_my_name_is_sticker.svg.webp');
   background-size: cover;
   background-position: top;
+  filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.747));
   width: 70vw;
   height: 70vh;
   margin: 20px;
@@ -132,6 +142,14 @@ section {
   top: 0;
   display: flex;
   justify-self: end;
+}
+.seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 .pask {
   font-family: 'Pask';
@@ -150,18 +168,18 @@ section {
 }
 .texto-pagina {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 30%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   margin-top: 20px;
   word-wrap: break-word; /* Permite que el texto se ajuste al ancho del contenedor */
   text-justify: inter-word; /* Justifica el texto entre palabras */
   overflow-wrap: break-word;
   white-space: normal;
-  background-color: rgba(0, 0, 0, 0.651); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 10px; /* Añade un poco de espacio alrededor del texto */
   border-radius: 10px; /* Bordes redondeados para el fondo */
   text-align: center; /* Centra el texto */
@@ -203,7 +221,8 @@ section {
 .texto-instagram {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 10px;
-  font-size: 3rem;
+  width: 50%;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0);
   margin-right: 10px;
@@ -375,6 +394,23 @@ section {
     transform: translate(0%, 30%) rotate(360deg);
   }
 }
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 1;
+  }
+  
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 
 /* Fuentes personalizadas */
 @font-face {
