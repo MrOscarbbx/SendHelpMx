@@ -71,6 +71,27 @@ header {
   animation: entrada-desde-arriba 1.2s ease-out forwards;
   text-align: center;
 }
+.logo-fondo {
+  position: absolute;
+  top: -50vh;
+  left: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 1;
+  filter:  drop-shadow(2px 2px 10px rgba(255, 0, 0, 0.75));
+}
+.logo-fondo img {
+  width: 150vw;
+  height: auto;
+  display: block;
+}
+.izq {
+  left: -100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 1;
+  transform: rotateY(180deg);
+}
 
 /* --- Secciones principales --- */
 .contenido {
@@ -125,6 +146,7 @@ header {
 }
 
 
+
 /* --- Directos --- */
 
 .directos {
@@ -140,6 +162,7 @@ header {
   background-size: auto;
   background-position: center;
 }
+
 .texto-directos {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
@@ -148,6 +171,7 @@ header {
   text-decoration: none;
   color: #fff;
 }
+
 .texto-directos:hover {
   color: #8401ff;
   cursor: pointer;
@@ -219,8 +243,9 @@ header {
   color: #ffffff;
   text-shadow: 2px 10px #252525;
 }
+
 .texto-pagina {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI';
   width: 60%;
   display: flex;
   justify-content: center;
