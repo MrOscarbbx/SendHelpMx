@@ -20,7 +20,7 @@
 
     <header>
             <div class="contenedor">
-                <div class="titulo scrolling-item">Send Help MX</div>
+                <img class="sendhelp" src="img/SendHelp2T.png" alt="Logo">
             </div>
             <img class="logo-fondo " src="img/Lineas mono transparente Blanco.png" alt="">
             <img class="logo-fondo izq" src="img/Lineas mono transparente Blanco.png" alt="">
@@ -37,42 +37,9 @@
                 una experiencia unica.
             </h2>
         </section>
-
-        <section class="directos scrolling-item">
-            <a href="https://www.twitch.tv/sendhelpmx" class="texto-pagina texto-directos"> 
-                Es Posible que nos encuentres en directo en twitch,
-                donde hacemos directos de videojuegos, y charlamos con nuestra comunidad.
-            </a>
-            <div class="twitch scrolling-item">
-                <div id="twitch-embed"></div>
-            </div>
-        </section>
-
-        <section class="instagram scrolling-item">
-            <blockquote 
-                class="instagram-media" 
-                data-instgrm-permalink="https://www.instagram.com/sendhelpmx/" 
-                data-instgrm-version="14">
-                <a href="https://www.instagram.com/sendhelpmx/" target="_blank">Ver perfil en Instagram</a>
-            </blockquote>
-            <h2 class="graffiti texto-instagram scrolling-item"> 
-                Puedes seguirnos en Instagram
-                para ver nuestro contenido
-                y estar al tanto de nuestras novedades.
-            </h2>
-        </section>
     </main>
 
     <!-- Scripts al final del body para mejor rendimiento -->
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script src="script.js"></script>
-    <script>
-        new Twitch.Player("twitch-embed", {
-            width: '100%',
-            height: '100%',
-            channel: "sendhelpmx"
-        });
-    </script>
-    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
