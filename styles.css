@@ -1,7 +1,14 @@
+html{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Pask', sans-serif;
+}
+
 body {
   position: relative;
-  overflow-x: hidden;
-  background: red                                             
+  background: red;
+  cursor: url('img/favicon.ico'), auto;
 }
 
 /* --- Splash Screen --- */
@@ -81,6 +88,27 @@ header {
   background-position: top;
   filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.75));
 }
+.trabajos {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+ }
+.trabajo {
+  width: 40%;
+  filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.75));
+}
+.captura-trabajo{
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.captura-trabajo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 
 
 /* --- Animaciones y efectos de scroll --- */
@@ -98,6 +126,7 @@ header {
 }
 
 /* --- Tipografía y estilos generales --- */
+
 .graffiti {
   font-family: 'TallAndDark';
   font-size: 6rem;
@@ -114,7 +143,12 @@ header {
   color: #ffffff;
   text-shadow: 2px 10px #252525;
 }
-
+.titulo {
+  font-size: 4rem;
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+}
 .texto-pagina {
   font-family: 'Segoe UI';
   width: 60%;
