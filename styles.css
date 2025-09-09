@@ -92,23 +92,61 @@ header {
   width: 100%;
   display: inline-flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
  }
 .trabajo {
   width: 40%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
   filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.75));
+}
+.trabajo img {
+  width: 100%;
+  border-radius: 15px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 .captura-trabajo{
   width: 100%;
   height: auto;
   border-radius: 15px;
+  transform: scale(1);
+  transition: opacity 0.3s ease-in-out;
 }
-.captura-trabajo:hover {
+
+.trabajo:hover img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.trabajo.nerf:hover {
+  background-image: url('img/Nerf2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
 
+
+.trabajo.scratch:hover {
+  background-image: url('img/Scratch2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.trabajo.hugo:hover {
+  background-image: url('img/Hugo2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
 
 
 /* --- Animaciones y efectos de scroll --- */
