@@ -181,7 +181,7 @@ section {
 }
 
 .mono-about-img:hover {
-  transform: perspective(600px) rotateY(-25deg) scale(1.08);
+  transform: perspective(600px) translate(-2vw, -6vh) rotateX(10deg) rotateY(-15deg) scale(1.08);
   filter: drop-shadow(6px 12px 20px rgba(0,0,0,0.5));
 }
 .sobre-nosotros {
